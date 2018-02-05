@@ -1,0 +1,133 @@
+//总体样式设置
+@text-font:14px PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Helvetica,Arial;//文本字体与大小
+@text-color:#333333;//文本颜色
+@a-color:#ED9127;//链接颜色
+@a-hover:#DB7B0D;//链接hover颜色
+@body-bg:#F8F8F8;//body背景色
+@content-bg:#fff;//内容背景色
+@border-color:#DDDDDD;//普通边框颜色
+//默认样式重置
+body{
+  margin: 0;
+  padding: 0;
+  background: @body-bg;
+  font:@text-font;
+  overflow: auto;
+}
+a{
+  color:@text-color;
+  text-decoration: none;
+}
+a:hover{
+  color:@a-color;
+  text-decoration: none;
+}
+ul,ol,dl,dd,h1,h2,h3,h4,h5,h6,p{
+  margin:0;
+  padding:0;
+  list-style: none;
+}
+.clear:after{
+  content:'';
+  display:block;
+  clear:both;
+}
+*{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.gt{
+  float:right;
+}
+.lf{
+  float:left;
+}
+//图片手型
+img{
+  cursor: pointer;
+  vertical-align: middle;
+}
+h3{
+  font-size: 16px;
+}
+//a按钮模型
+.a-btn(@a-border,@a-text,@a-font){
+  border:1px solid @a-border;
+  color:@a-text;
+  font-size: @a-font;
+}
+//内容居中，背景
+.content{
+  margin:0 auto;
+  width:1200px;
+  min-height: 600px;
+  padding:0 20px;
+  background: @content-bg;
+  padding-bottom: 50px;
+}
+//输入框聚焦
+input:focus{
+  outline: none;
+}
+form.sui-form input[type="text"]{
+  font-size: 14px;
+}
+//表单placeholder文字颜色
+input::-webkit-input-placeholder{
+  color:#BEBEBE!important;
+  font-size: 14px;
+}
+input:-moz-placeholder{
+  color:#BEBEBE!important;//4-18
+  font-size: 14px;
+}
+input::-moz-placeholder{
+  color:#BEBEBE!important;//19+
+  font-size: 14px;
+}
+input:-ms-input-placeholder{
+  color:#BEBEBE!important;//10+
+  font-size: 14px;
+}
+//消除文本输入框的内阴影
+.sui-form input[type="text"]{
+  box-shadow: none;
+  color: @text-color;
+  font-family: @text-font;
+}
+//日历
+.datepicker{
+  width: 258px;
+  height: 258px;
+  //年月日
+  .table-condensed{
+    width: 258px;
+    height: 258px;
+  }
+}
+//下拉框里文本颜色
+.dropdown-inner{
+  span{
+    color:#BEBEBE;
+    font-size: 14px;
+  }
+}
+#outerdiv {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1100;
+  width: 100%;
+  height: 100%;
+  display: none;
+  #innerdiv {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

@@ -1,0 +1,467 @@
+<!--<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=7;IE=9" />
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta name="description" content="">
+    <title>分行详情</title>
+    <link href="http://www.ehaofang.com/img/ef.ico" type="image/x-icon" rel="icon">
+    <link href="http://www.ehaofang.com/img/ef.ico" type="image/x-icon" rel="shortcut icon">
+    <link href="http://g.alicdn.com/sj/dpl/1.5.1/css/sui.min.css" rel="stylesheet">
+    <link href="http://g.alicdn.com/sj/dpl/1.5.1/css/sui-append.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/canalDetail.css"/>
+</head>
+<body>
+<!--<%@ include file="head.jsp" %>-->
+<div class="content">
+    <!--面包屑导航-->
+    <p id="head">
+        <a href="http://www.xtco.cn/">轩天实业</a>&gt;<a>渠道</a>&gt;<a href="canalData.html">渠道公司</a>
+    </p>
+    <!--筛选-->
+    <header>
+        <a class="active">分行信息</a><a>分行数据</a>
+    </header>
+    <!--内容区-->
+    <section id="content">
+        <!--渠道基本信息-->
+        <div class="grid-demo">
+            <div class="sui-row-fluid">
+                <div class="span6"><h3>古北店 <span>No.34567654</span>链家地产上海分公司</h3></div>
+                <div class="span6 btns"><a id="md5" data-toggle="modal" data-target="myModal5" data-keyboard="false">修改</a></div>
+            </div>
+        </div>
+        <!--渠道修改模态框-->
+        <div id="cover"></div>
+        <div id="myModal5" tabindex="-1" role="dialog" data-hasfoot="false" class="sui-modal hide fade">
+            <div class="bar"></div>
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" data-dismiss="modal" aria-hidden="true" class="sui-close cancel">×</button>
+                        <h4 class="modal-title">基本信息</h4>
+                    </div>
+                    <div class="modal-body">
+                        <!--动态生成-->
+                        <div class="grid-demo">
+                            <div class="sui-row-fluid">
+                                <div class="span6">
+                                    <form class="sui-form form-horizontal">
+                                        <div class="control-group">
+                                            <label class="control-label">公司名称</label>
+                                            <div class="controls">
+                                                <input type="text" id="companyName" placeholder="请输入公司名称" >
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="span6">
+                                    <form class="sui-form form-horizontal">
+                                        <div class="control-group">
+                                            <label class="control-label">简称</label>
+                                            <div class="controls">
+                                                <input type="text" id="simpleName" placeholder="请输入简称名称" >
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="sui-row-fluid">
+                                <div class="span6">
+                                    <form class="sui-form form-horizontal">
+                                        <div class="control-group" id="registerAttr">
+                                            <label class="control-label guimo">注册地址</label>
+                                            <div class="controls">
+                                                <!--市-->
+                                <span class="sui-dropdown dropdown-bordered select">
+        <span class="dropdown-inner" id="cityDrop">
+        <a  role="button" data-toggle="dropdown" class="dropdown-toggle">
+            <input type="hidden" ><i class="caret"></i><span>市</span>
+        </a>
+        <ul  role="menu" id="cityMenu" class="sui-dropdown-menu">
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);">上海</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);">南京</a></li>
+        </ul></span></span>
+                                                <!--区-->
+                              <span class="sui-dropdown dropdown-bordered select">
+        <span class="dropdown-inner" id="boroughDrop">
+        <a  role="button" data-toggle="dropdown" class="dropdown-toggle">
+            <input type="hidden" ><i class="caret"></i><span>区</span>
+        </a>
+        <ul  role="menu" id="boroughMenu" class="sui-dropdown-menu">
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);">浦东</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);">嘉定</a></li>
+        </ul></span></span>
+                                                <!--板块-->
+                                <span class="sui-dropdown dropdown-bordered select">
+        <span class="dropdown-inner" id="plateDrop">
+        <a  role="button" data-toggle="dropdown" class="dropdown-toggle">
+            <input type="hidden" ><i class="caret"></i><span>板块</span>
+        </a>
+        <ul  role="menu" id="plateMenu" class="sui-dropdown-menu">
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);">上岗</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);">申花</a></li>
+        </ul></span></span>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="span6">
+                                    <form class="sui-form form-horizontal">
+                                        <div class="control-group">
+                                            <label class="control-label">详细地址</label>
+                                            <div class="controls">
+                                                <input type="text" id="address" placeholder="请输入内容" >
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="sui-row-fluid">
+                                <div class="span6">
+                                    <form class="sui-form form-horizontal">
+                                        <div class="control-group">
+                                            <label class="control-label">公司法人</label>
+                                            <div class="controls">
+                                                <input type="text" id="legalPerson" placeholder="请输入" >
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="span6">
+                                    <form class="sui-form form-horizontal">
+                                        <div class="control-group">
+                                            <label class="control-label">法人联系方式</label>
+                                            <div class="controls">
+                                                <input type="text" id="contactWays" placeholder="请输入" >
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="sui-row-fluid">
+                                <div class="span6">
+                                    <form class="sui-form form-horizontal">
+                                        <div class="control-group">
+                                            <label class="control-label guimo">公司规模</label>
+                                            <div class="controls">
+                                <span class="sui-dropdown dropdown-bordered select">
+        <span class="dropdown-inner" id="companySize">
+        <a  role="button" data-toggle="dropdown" class="dropdown-toggle">
+            <input type="hidden" ><i class="caret"></i><span>请选择</span>
+        </a>
+        <ul  role="menu" id="companySizeMenu" class="sui-dropdown-menu">
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);">上海</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);">南京</a></li>
+        </ul></span></span>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="span6">
+                                    <form class="sui-form form-horizontal">
+                                        <div class="control-group type">
+                                            <label class="control-label">主营业务</label>
+                                            <div class="controls">
+                                                <img src="./img/caret-down.png" alt="" class="gt caret"/>
+                                                <div id="mainBusiness" >
+                                                    请选择（多选）
+                                                </div>
+                                                <ul id="mainBusinessMenu">
+                                                    <li>
+                                                        <img src="./img/right.png" alt="" class="gt"/>
+                                                        <a class="0">公寓</a>
+                                                    </li>
+                                                    <li>
+                                                        <img src="./img/right.png" alt="" class="gt"/>
+                                                        <a class="1">别墅</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="sui-row-fluid">
+                                <div class="span6">
+                                    <form class="sui-form form-horizontal">
+                                        <div class="control-group mainType">
+                                            <label class="control-label">主营类型</label>
+                                            <div class="controls">
+                                                <img src="./img/caret-down.png" alt="" class="gt caret"/>
+                                                <div id="mainType" >
+                                                    请选择（多选）
+                                                </div>
+                                                <ul id="mainTypeMenu">
+                                                    <li>
+                                                        <img src="./img/right.png" alt="" class="gt"/>
+                                                        <a class="0">公寓</a>
+                                                    </li>
+                                                    <li>
+                                                        <img src="./img/right.png" alt="" class="gt"/>
+                                                        <a class="1">别墅</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="span6">
+                                    <form class="sui-form form-horizontal">
+                                        <div class="control-group">
+                                            <label class="control-label guimo">主营价格区间</label>
+                                            <div class="controls">
+                                <span class="sui-dropdown dropdown-bordered select">
+        <span class="dropdown-inner" id="mainPrice">
+        <a  role="button" data-toggle="dropdown" class="dropdown-toggle">
+            <input type="hidden" ><i class="caret"></i><span>请选择</span>
+        </a>
+        <ul  role="menu" id="mainPriceMenu" class="sui-dropdown-menu">
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);">上海</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);">南京</a></li>
+        </ul></span></span>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" data-ok="modal" class="sui-btn modify">修改</button>
+                        <button type="button" data-dismiss="modal" class="sui-btn cancel">取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-demo">
+            <div class="sui-row-fluid">
+                <div class="span1">分行地址</div>
+                <div class="span5">上海 上海市 泗凯路555号</div>
+                <div class="span1">录入时间</div>
+                <div class="span5">2017-07-08</div>
+            </div>
+        </div>
+        <div class="grid-demo">
+            <div class="sui-row-fluid">
+                <div class="span1">分行负责人</div>
+                <div class="span5">张晓</div>
+                <div class="span1">分行联系方式</div>
+                <div class="span5">15699293923</div>
+            </div>
+        </div>
+        <div class="grid-demo">
+            <div class="sui-row-fluid">
+                <div class="span1">公司人数</div>
+                <div class="span5">30-50</div>
+                <div class="span1">主营业务</div>
+                <div class="span5">二手、新房</div>
+            </div>
+        </div>
+        <div class="grid-demo">
+            <div class="sui-row-fluid">
+                <div class="span1">主营类型</div>
+                <div class="span5">别墅</div>
+                <div class="span1">主营价格区间</div>
+                <div class="span5">300-500万</div>
+            </div>
+        </div>
+        <!--发佣信息-->
+        <div class="grid-demo toolbar">
+            <div class="sui-row-fluid">
+                <div class="span6"><h3>发佣信息</h3></div>
+                <div class="span6 btns"><a id="md6" data-toggle="modal" data-target="myModal6" data-keyboard="false">修改</a></div>
+            </div>
+        </div>
+        <!--发佣信息修改模态框-->
+        <div id="myModal6" tabindex="-1" role="dialog" data-hasfoot="false" class="sui-modal hide fade">
+            <div class="bar"></div>
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" data-dismiss="modal" aria-hidden="true" class="sui-close cancel">×</button>
+                        <h4 class="modal-title">发佣信息</h4>
+                    </div>
+                    <div class="modal-body">
+                        <!--动态生成-->
+                        <div class="grid-demo">
+                            <div class="sui-row-fluid">
+                                <div class="span6">
+                                    <form class="sui-form form-horizontal">
+                                        <div class="control-group">
+                                            <label class="control-label">开户行</label>
+                                            <div class="controls">
+                                                <input type="text" id="khh" placeholder="请输入" >
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="span6">
+                                    <form class="sui-form form-horizontal">
+                                        <div class="control-group">
+                                            <label class="control-label">账户名</label>
+                                            <div class="controls">
+                                                <input type="text" id="zhm" placeholder="请输入" >
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="sui-row-fluid">
+                                <div class="span6">
+                                    <form class="sui-form form-horizontal">
+                                        <div class="control-group">
+                                            <label class="control-label">账号</label>
+                                            <div class="controls">
+                                                <input type="text" id="" placeholder="请输入" >
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" data-ok="modal" class="sui-btn modify">修改</button>
+                        <button type="button" data-dismiss="modal" class="sui-btn cancel">取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-demo">
+            <div class="sui-row-fluid">
+                <div class="span1">开户行</div>
+                <div class="span5">中国银行浦东支行</div>
+                <div class="span1">账户名</div>
+                <div class="span5">中原地产上海分公司</div>
+            </div>
+        </div>
+        <div class="grid-demo">
+            <div class="sui-row-fluid">
+                <div class="span1">账号</div>
+                <div class="span5">5848 9392 1233 232</div>
+            </div>
+        </div>
+        <!--证照附件-->
+        <div class="grid-demo toolbar">
+            <div class="sui-row-fluid">
+                <div class="span6"><h3>证照附件</h3></div>
+                <div class="span6 btns"><a id="md7" data-toggle="modal" data-target="myModal7" data-keyboard="false">修改</a></div>
+            </div>
+        </div>
+        <!--证照附件修改模态框-->
+        <div id="myModal7" tabindex="-1" role="dialog" data-hasfoot="false" class="sui-modal hide fade">
+            <div class="bar"></div>
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" data-dismiss="modal" aria-hidden="true" class="sui-close cancel">×</button>
+                        <h4 class="modal-title">证照附件</h4>
+                    </div>
+                    <div class="modal-body">
+                        <input type="file" id="file" style="display: none"/>
+                        <!--动态生成-->
+                        <div class="grid-demo">
+                            <div class="sui-row-fluid uploadMd">
+                                <div class="span1">营业执照</div>
+                                <ul class="span5">
+                                    <li class="drag_load" id="licence">
+                                        <p><img src="img/upload.png" alt=""/></p>
+                                        <p>将文件拖到此处，或 <a>点击上传</a></p>
+                                    </li>
+                                    <li>
+                                        <img src="img/test.jpg" alt=""/>
+                                        <div class="cover">
+                                            <img class="zoomout" src="img/zoomout.png" alt=""/>
+                                            <img src="img/delete.png" alt=""/>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <img src="img/test.jpg" alt=""/>
+                                        <div class="cover">
+                                            <img class="zoomout" src="img/zoomout.png" alt=""/>
+                                            <img src="img/delete.png" alt=""/>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <img src="img/test.jpg" alt=""/>
+                                        <div class="cover">
+                                            <img class="zoomout" src="img/zoomout.png" alt=""/>
+                                            <img src="img/delete.png" alt=""/>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="span1 prove">开户证明</div>
+                                <ul class="span5 prove">
+                                    <li class="drag_load" id="proveLi">
+                                        <p><img src="img/upload.png" alt=""/></p>
+                                        <p>将文件拖到此处，或 <a>点击上传</a></p>
+                                    </li>
+                                    <li>
+                                        <img src="img/test.jpg" alt=""/>
+                                        <div class="cover">
+                                            <img class="zoomout" src="img/zoomout.png" alt=""/>
+                                            <img src="img/delete.png" alt=""/>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <img src="img/test.jpg" alt=""/>
+                                        <div class="cover">
+                                            <img class="zoomout" src="img/zoomout.png" alt=""/>
+                                            <img src="img/delete.png" alt=""/>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <img src="img/test.jpg" alt=""/>
+                                        <div class="cover">
+                                            <img class="zoomout" src="img/zoomout.png" alt=""/>
+                                            <img src="img/delete.png" alt=""/>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" data-ok="modal" class="sui-btn modify">修改</button>
+                        <button type="button" data-dismiss="modal" class="sui-btn cancel">取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-demo">
+            <div class="sui-row-fluid">
+                <div class="span1 prove">营业执照</div>
+                <ul class="span5 proof">
+                    <li><img src="img/test.jpg" alt=""/></li>
+                    <li><img src="img/test.jpg" alt=""/></li>
+                </ul>
+                <div class="span1 prove">开户证明</div>
+                <ul class="span5 proof">
+                    <li><img src="img/test.jpg" alt=""/></li>
+                    <li><img src="img/test.jpg" alt=""/></li>
+                </ul>
+            </div>
+        </div>
+        <!--图片放大容器-->
+        <div id="outerdiv">
+            <div id="innerdiv">
+                <img id="bigimg" src="" />
+            </div>
+        </div>
+    </section>
+</div>
+<script type="text/javascript" src="http://g.alicdn.com/sj/lib/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="http://g.alicdn.com/sj/dpl/1.5.1/js/sui.min.js"></script>
+<!--<script type="text/javascript" src="http://loupan.ehaofangwang.com/ehaofang-pmweb/pages/js/jquery-1.10.2.min.js"></script>-->
+<!--<script type="text/javascript" src="http://loupan.ehaofangwang.com/ehaofang-pmweb/pages/js/agent.js"></script>-->
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/storeDetail.js"></script>
+</body>
+</html>

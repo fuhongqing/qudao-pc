@@ -1,0 +1,194 @@
+@import "init";//引入初始less文件
+//面包屑导航
+#head{
+  border-bottom: 1px solid @border-color;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  padding: 10px 0;
+  a{
+    font-size: 8px;
+  }
+}
+//筛选
+header{
+  height: 95px;
+  background: @body-bg;
+  padding: 15px 10px;
+  //header公共ul
+  ul>li{
+    float: left;
+    margin-left: 25px;
+  }
+  ul>li:first-child{
+    margin-left: 0;
+  }
+  li.active{
+    color:@a-color;
+  }
+  //所在地区
+  #area>li{
+    cursor: pointer;
+  }
+  //业绩时间
+  #achiveTime{
+    margin-top: 14px;
+    input{
+      width: 120px;
+      height: 36px;
+      border: 1px solid @border-color;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    //确定按钮
+    #btn{
+      width: 90px;
+      height: 36px;
+      outline: none;
+      background: #F2F2F2;
+      border: 1px solid @border-color;
+      border-radius: 4px;
+    }
+    //向下箭头
+    img{
+      position: relative;
+      right: 20px;
+    }
+    span{
+      margin-right: 10px;
+    }
+  }
+  #achiveTime>li:first-child{
+    margin-top: 9px;
+  }
+  #achiveTime>li:last-child{
+    margin-left: 20px;
+  }
+}
+//列表内容
+//搜索框
+section{
+  #search{
+    .sui-form{
+      margin-bottom: 0;
+      img{
+        width: 19px;
+        height: 19px;
+      }
+    }
+    height:56px;
+    background: @content-bg;
+    .input-append{
+      margin:10px 0;
+      width:300px;
+      border-radius: 4px;
+      input{
+        width: 264px;
+        height:36px;
+        line-height: 36px;
+        vertical-align: middle;
+        border-radius: 4px 0 0 4px;
+      }
+      span{
+        display: inline-block;
+        width: 36px;
+        height: 36px;
+        line-height: 25px;
+        background: #FCFBF9;
+        border-radius: 0 4px 4px 0;
+      }
+    }
+  }
+  //经纪人列表
+  //#items项目列表
+  #items{
+    margin:0 auto;
+    padding:0 15px;
+    background: @content-bg;
+    border: 1px solid @border-color;
+    tr{
+      height:50px;
+      border-bottom: 1px solid @border-color;
+    }
+    tr:last-child{
+      border-bottom:none;
+    }
+    thead{
+      tr{
+        height:51px;
+      }
+      th{
+        line-height: 2.1;
+        font-size: 16px;
+        border-right: 1px solid @border-color;
+        vertical-align: middle;
+        .up-img{
+          position: relative;
+          bottom: 5px;
+          left: 22px;
+        }
+        .down-img{
+          position: relative;
+          top: 5px;
+        }
+      }
+      th:last-child{
+        border-right: none;
+      }
+    }
+    tbody{
+      td{
+        font-size: 14px;
+        border-right: 1px solid @border-color;
+        padding: 5px 8px;
+        cursor: pointer;
+      }
+      td:last-child{
+        border-right: none;
+      }
+      tr:nth-child(2n-1){
+        background: @body-bg;
+      }
+    }
+  }
+  //分页器
+  #pages {
+    margin-top: 20px;
+    li{
+      float:left;
+      width: 28px;
+      height: 28px;
+      line-height: 28px;
+      font-size: 13px;
+      text-align: center;
+      border:1px solid @border-color;
+      color: @text-color;
+      cursor: pointer;
+    }
+    li.disabled {
+      background: #EEEEEE;
+      color:@border-color;
+      cursor: default;
+    }
+    li.next{
+      border-left: none;
+    }
+    #pageNum{
+      li{
+        border-left: none;
+      }
+      li.active{
+        color: @content-bg;
+        background: @a-color;
+        border-color: @a-color;
+      }
+      li.active:hover{
+        background: @a-hover;
+      }
+      li:hover {
+        color: @content-bg;
+        background: @a-color;
+        border-color: @a-color;
+      }
+    }
+  }
+}

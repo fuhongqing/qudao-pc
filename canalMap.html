@@ -1,0 +1,53 @@
+<!--<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>渠道地图</title>
+    <link href="http://www.ehaofang.com/img/ef.ico" type="image/x-icon" rel="icon">
+    <link href="http://www.ehaofang.com/img/ef.ico" type="image/x-icon" rel="shortcut icon">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/canalMap.css" />
+</head>
+<body>
+<!--<%@ include file="head.jsp" %>-->
+<!--面包屑导航-->
+<header>
+    <a href="http://www.xtco.cn/">轩天实业</a>&gt;<a>渠道</a>&gt;<a href="canalData.html">渠道公司</a>
+</header>
+<!--视图切换-->
+<div id="menu">
+    <select>
+        <option value="0">市级视图</option>
+        <option value="1">区县视图</option>
+    </select>
+</div>
+<section>
+    <!--地图容器-->
+    <div id="allMap"></div>
+    <!--合作渠道-->
+    <div id="coCanal">
+        <p>合作渠道(以分行为单位，仅显示有分红的市，并全局放大)</p>
+        <ul class="clear">
+            <li>上海</li>
+            <li class="progress"></li>
+            <li>29393家</li>
+        </ul>
+        <ul class="clear">
+            <li>上海</li>
+            <li class="progress"></li>
+            <li>29393家</li>
+        </ul>
+        <ul class="clear">
+            <li>上海</li>
+            <li class="progress"></li>
+            <li>29393家</li>
+        </ul>
+    </div >
+</section>
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=CB2ede775afeb6e413abd40261396a69"></script>
+<script type="text/javascript" src="js/canalMap.js" ></script>
+</body>
+</html>

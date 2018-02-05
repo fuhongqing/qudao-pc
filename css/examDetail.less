@@ -1,0 +1,120 @@
+@import "init";
+//面包屑导航
+#head{
+  border-bottom: 1px solid @border-color;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  padding: 10px 0;
+}
+//内容区
+#content{
+  .span1{
+    width: 8.9%;
+  }
+  .span5{
+    width: 40%;
+  }
+  //修改按钮
+  .btns{
+    text-align: right;
+    a{
+      display: inline-block;
+      width: 70px;
+      height: 26px;
+      line-height: 26px;
+      background: @a-color;
+      border-radius: 4px;
+      text-align: center;
+      color: #fff;
+    }
+    a:hover{
+      background: @a-hover;
+    }
+    //新增按钮
+    a.add{
+      margin-right: 10px;
+    }
+  }
+  #btn-file{
+    display: none;
+  }
+  //行间距
+  .grid-demo{
+    margin-bottom: 20px;
+  }
+  .sui-row-fluid>div:nth-child(2n-1){
+    color:#B2B2B2;
+    h3{
+      color:@text-color;
+    }
+  }
+  //qudao公司，维护时间段
+  .sui-row-fluid>div.time{
+    color: @text-color;
+  }
+  .sui-row-fluid>div.company{
+    color: @text-color;
+    font-weight: bold;
+  }
+  //营运执照证明图片
+  ul.proof{
+    display: flex;
+    flex-wrap: wrap;
+    li{
+      width: 175px;
+      height: 107px;
+      border-radius: 2.8px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+    li>img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  div.prove{
+    margin-top: 37px;
+  }
+  //工具条
+  div.toolbar{
+    border-bottom: 1px solid @border-color;
+    padding-bottom: 5px;
+  }
+  //审核记录
+  #record>div{
+    margin-bottom: 20px;
+    .span2{
+      width: 145px;
+    }
+  }
+  //通过，驳回
+  #passBtn{
+    margin-top: 20px;
+    .span12{
+      text-align: right;
+      a{
+        display: inline-block;
+        width: 70px;
+        height: 26px;
+        line-height: 26px;
+        background:#fff;
+        border-radius: 4px;
+        text-align: center;
+      }
+      a.pass{
+        color:#fff;
+        background: @a-color;
+      }
+      a.pass:hover{
+        background: @a-hover;
+      }
+      a:last-child{
+        border: 1px solid @border-color;
+      }
+      //新增按钮
+      a.pass{
+        margin-right: 20px;
+      }
+    }
+  }
+}

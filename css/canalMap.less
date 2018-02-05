@@ -1,0 +1,93 @@
+@import "init";
+body{
+  padding: 0 20px;
+  background: #fff;
+}
+header{
+  border-bottom: 1px solid @border-color;
+  margin-top: 50px;
+  margin-bottom: 48px;
+  padding: 10px 0;
+  a{
+    font-size: 8px;
+  }
+}
+//视图切换
+#menu{
+  margin-bottom: 20px;
+  select{
+    width: 108px;
+    height: 36px;
+    line-height: 36px;
+    border: 1px solid @border-color;
+    border-radius: 4px;
+    color: #BABABA;
+    outline: none;
+    padding: 0 10px;
+  }
+}
+section{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  //信息窗口
+  #info{
+    position: relative;
+    .caret{
+      width: 16px;
+      height: 0;
+      border: 7px solid transparent;
+      border-bottom-color: @a-color;
+      position: absolute;
+      top:-14px;
+      left: 90px;
+    }
+    ul{
+      width: 130px;
+      min-height: 124px;
+      background: @a-color;
+      opacity: 0.8;
+      li{
+        display: flex;
+        height: 32px;
+        padding: 0 10px;
+        justify-content: space-between;
+        color: #fff;
+        align-items: center;
+      }
+      li:first-child{
+        border-bottom: 1px solid #fff;
+      }
+    }
+  }
+  //地图容器
+  #allMap{
+    height:600px;
+    width: 60%;
+  }
+  //合作渠道
+  #coCanal{
+    margin-right: 100px;
+    width: 350px;
+    min-height: 192px;
+    font-size: 12px;
+    background: #EAEAEA;
+    padding: 10px;
+    ul{
+      margin-top: 25px;
+    }
+    ul>li{
+      float: left;
+      height: 20px;
+      line-height: 9px;
+    }
+    //进度显示
+    .progress{
+      width: 200px;
+      height: 6px;
+      background: @a-color;
+      margin-left: 13px;
+      margin-right: 23px;
+    }
+  }
+}

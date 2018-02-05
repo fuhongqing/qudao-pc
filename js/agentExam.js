@@ -1,0 +1,10 @@
+$(function(){
+    //头部筛选
+    $('#nav').on('click','a',function(e){
+        e.preventDefault();
+        $(e.target).addClass('active').siblings().removeClass('active');
+        if($(e.target).html()=='渠道公司'){
+            $(location).attr('href','canalData.html');
+        }
+    });
+});

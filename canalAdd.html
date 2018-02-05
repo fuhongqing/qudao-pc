@@ -1,0 +1,351 @@
+<!--<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=7;IE=9" />
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta name="description" content="">
+    <title>新增渠道</title>
+    <link href="http://www.ehaofang.com/img/ef.ico" type="image/x-icon" rel="icon">
+    <link href="http://www.ehaofang.com/img/ef.ico" type="image/x-icon" rel="shortcut icon">
+    <link href="http://g.alicdn.com/sj/dpl/1.5.1/css/sui.min.css" rel="stylesheet">
+    <link href="http://g.alicdn.com/sj/dpl/1.5.1/css/sui-append.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/canalAdd.css"/>
+</head>
+<body>
+<!--<%@ include file="head.jsp" %>-->
+<div class="content">
+    <!--面包屑导航-->
+    <p id="head">
+        <a href="http://www.xtco.cn/">轩天实业</a>&gt;<a>渠道</a>&gt;<a href="canalData.html">渠道公司</a>&gt;<a href="canalAdd.html">新增渠道</a>
+    </p>
+    <!--内容区-->
+    <section id="container">
+        <!--基本信息-->
+        <div class="toolbar">
+            <h3>基本信息</h3>
+        </div>
+        <div class="grid-demo">
+            <div class="sui-row-fluid">
+                <div class="span6">
+                    <form class="sui-form form-horizontal">
+                        <div class="control-group">
+                            <label class="control-label">公司名称</label>
+                            <div class="controls">
+                                <input type="text" id="companyName" placeholder="请输入公司名称" >
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="span6">
+                    <form class="sui-form form-horizontal">
+                        <div class="control-group">
+                            <label class="control-label">简称</label>
+                            <div class="controls">
+                                <input type="text" id="simpleName" placeholder="请输入简称名称" >
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="sui-row-fluid">
+                <div class="span6">
+                    <form class="sui-form form-horizontal">
+                        <div class="control-group" id="registerAttr">
+                            <label class="control-label">注册地址</label>
+                            <div class="controls">
+                                <!--市-->
+                                <span class="sui-dropdown dropdown-bordered select">
+        <span class="dropdown-inner" id="cityDrop">
+        <a  role="button" data-toggle="dropdown" class="dropdown-toggle">
+            <input type="hidden" ><i class="caret"></i><span>市</span>
+        </a>
+        <ul  role="menu" id="cityMenu" class="sui-dropdown-menu">
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);">上海</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);">南京</a></li>
+        </ul></span></span>
+                                <!--区-->
+                              <span class="sui-dropdown dropdown-bordered select">
+        <span class="dropdown-inner" id="boroughDrop">
+        <a  role="button" data-toggle="dropdown" class="dropdown-toggle">
+            <input type="hidden" ><i class="caret"></i><span>区</span>
+        </a>
+        <ul  role="menu" id="boroughMenu" class="sui-dropdown-menu">
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);">浦东</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);">嘉定</a></li>
+        </ul></span></span>
+                                <!--板块-->
+                                <span class="sui-dropdown dropdown-bordered select">
+        <span class="dropdown-inner" id="plateDrop">
+        <a  role="button" data-toggle="dropdown" class="dropdown-toggle">
+            <input type="hidden" ><i class="caret"></i><span>板块</span>
+        </a>
+        <ul  role="menu" id="plateMenu" class="sui-dropdown-menu">
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);">上岗</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);">申花</a></li>
+        </ul></span></span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="span6">
+                    <form class="sui-form form-horizontal">
+                        <div class="control-group">
+                            <label class="control-label">详细地址</label>
+                            <div class="controls">
+                                <input type="text" id="address" placeholder="请输入内容" >
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="sui-row-fluid">
+                <div class="span6">
+                    <form class="sui-form form-horizontal">
+                        <div class="control-group">
+                            <label class="control-label">公司法人</label>
+                            <div class="controls">
+                                <input type="text" id="legalPerson" placeholder="请输入" >
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="span6">
+                    <form class="sui-form form-horizontal">
+                        <div class="control-group">
+                            <label class="control-label">法人联系方式</label>
+                            <div class="controls">
+                                <input type="text" id="contactWays" placeholder="请输入" >
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="sui-row-fluid">
+                <div class="span6">
+                    <form class="sui-form form-horizontal">
+                        <div class="control-group">
+                            <label class="control-label">公司规模</label>
+                            <div class="controls">
+                                <span class="sui-dropdown dropdown-bordered select">
+        <span class="dropdown-inner" id="companySize">
+        <a  role="button" data-toggle="dropdown" class="dropdown-toggle">
+            <input type="hidden" ><i class="caret"></i><span>请选择</span>
+        </a>
+        <ul  role="menu" id="companySizeMenu" class="sui-dropdown-menu">
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);">上海</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);">南京</a></li>
+        </ul></span></span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="span6">
+                    <form class="sui-form form-horizontal">
+                        <div class="control-group type">
+                            <label class="control-label">主营业务</label>
+                            <div class="controls">
+                                <img src="./img/caret-down.png" alt="" class="gt caret"/>
+                                <div id="mainBusiness" >
+                                    请选择（多选）
+                                </div>
+                                <ul id="mainBusinessMenu">
+                                    <li>
+                                        <img src="./img/right.png" alt="" class="gt"/>
+                                        <a class="0">公寓</a>
+                                    </li>
+                                    <li>
+                                        <img src="./img/right.png" alt="" class="gt"/>
+                                        <a class="1">别墅</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="sui-row-fluid">
+                <div class="span6">
+                    <form class="sui-form form-horizontal">
+                        <div class="control-group mainType">
+                            <label class="control-label">主营类型</label>
+                            <div class="controls">
+                                <img src="./img/caret-down.png" alt="" class="gt caret"/>
+                                <div id="mainType" >
+                                    请选择（多选）
+                                </div>
+                                <ul id="mainTypeMenu">
+                                    <li>
+                                        <img src="./img/right.png" alt="" class="gt"/>
+                                        <a class="0">公寓</a>
+                                    </li>
+                                    <li>
+                                        <img src="./img/right.png" alt="" class="gt"/>
+                                        <a class="1">别墅</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="span6">
+                    <form class="sui-form form-horizontal">
+                        <div class="control-group">
+                            <label class="control-label">主营价格区间</label>
+                            <div class="controls">
+                                <span class="sui-dropdown dropdown-bordered select">
+        <span class="dropdown-inner" id="mainPrice">
+        <a  role="button" data-toggle="dropdown" class="dropdown-toggle">
+            <input type="hidden" ><i class="caret"></i><span>请选择</span>
+        </a>
+        <ul  role="menu" id="mainPriceMenu" class="sui-dropdown-menu">
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);">上海</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0);">南京</a></li>
+        </ul></span></span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="sui-row-fluid">
+                <div class="span6">
+                    <form class="sui-form form-horizontal">
+                        <div class="control-group">
+                            <label class="control-label">分行数量</label>
+                            <div class="controls">
+                                <input type="text" id="branches" placeholder="请输入" >
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div></div>
+            </div>
+        </div>
+        <!--发佣信息-->
+        <div class="toolbar">
+            <h3>发佣信息</h3>
+        </div>
+        <div class="grid-demo">
+            <div class="sui-row-fluid">
+                <div class="span6">
+                    <form class="sui-form form-horizontal">
+                        <div class="control-group">
+                            <label class="control-label">开户行</label>
+                            <div class="controls">
+                                <input type="text" id="khh" placeholder="请输入" >
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="span6">
+                    <form class="sui-form form-horizontal">
+                        <div class="control-group">
+                            <label class="control-label">账户名</label>
+                            <div class="controls">
+                                <input type="text" id="zhm" placeholder="请输入" >
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="sui-row-fluid">
+                <div class="span6">
+                    <form class="sui-form form-horizontal">
+                        <div class="control-group">
+                            <label class="control-label">账号</label>
+                            <div class="controls">
+                                <input type="text" id="" placeholder="请输入" >
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div></div>
+            </div>
+        </div>
+        <!--证照附件-->
+        <input type="file" id="file" style="display: none"/>
+        <div class="toolbar">
+            <h3>证照附件</h3>
+        </div>
+        <div class="grid-demo">
+            <div class="sui-row-fluid" id="upload">
+                <div class="span1">营业执照</div>
+                <ul class="span5">
+                    <li id="licence" class="drag_load">
+                        <p><img src="img/upload.png" alt=""/></p>
+                        <p>将文件拖到此处，或 <a>点击上传</a></p>
+                    </li>
+                    <li>
+                        <img src="img/test.jpg" alt=""/>
+                        <div class="cover">
+                            <img class="zoomout" src="img/zoomout.png" alt=""/>
+                            <img class="delete" src="img/delete.png" alt=""/>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/test.jpg" alt=""/>
+                        <div class="cover">
+                            <img class="zoomout" src="img/zoomout.png" alt=""/>
+                            <img class="delete" src="img/delete.png" alt=""/>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/test.jpg" alt=""/>
+                        <div class="cover">
+                            <img class="zoomout" src="img/zoomout.png" alt=""/>
+                            <img class="delete" src="img/delete.png" alt=""/>
+                        </div>
+                    </li>
+                </ul>
+                <div class="span1 prove">开户证明</div>
+                <ul class="span5 prove">
+                    <li id="certificate" class="drag_load">
+                        <p><img src="img/upload.png" alt=""/></p>
+                        <p>将文件拖到此处，或 <a>点击上传</a></p>
+                    </li>
+                    <li>
+                        <img src="img/test.jpg" alt=""/>
+                        <div class="cover">
+                            <img class="zoomout" src="img/zoomout.png" alt=""/>
+                            <img class="delete" src="img/delete.png" alt=""/>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/test.jpg" alt=""/>
+                        <div class="cover">
+                            <img class="zoomout" src="img/zoomout.png" alt=""/>
+                            <img class="delete" src="img/delete.png" alt=""/>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/test.jpg" alt=""/>
+                        <div class="cover">
+                            <img class="zoomout" src="img/zoomout.png" alt=""/>
+                            <img class="delete" src="img/delete.png" alt=""/>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--图片放大容器-->
+        <div id="outerdiv">
+            <div id="innerdiv">
+                <img id="bigimg" src="" />
+            </div>
+        </div>
+        <!--保存-->
+        <div id="save"><a>保存</a></div>
+    </section>
+</div>
+<script type="text/javascript" src="http://g.alicdn.com/sj/lib/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="http://g.alicdn.com/sj/dpl/1.5.1/js/sui.min.js"></script>
+<!--<script type="text/javascript" src="http://loupan.ehaofangwang.com/ehaofang-pmweb/pages/js/jquery-1.10.2.min.js"></script>-->
+<!--<script type="text/javascript" src="http://loupan.ehaofangwang.com/ehaofang-pmweb/pages/js/agent.js"></script>-->
+<script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="./js/canalAdd.js"></script>
+</body>
+</html>

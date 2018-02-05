@@ -1,0 +1,224 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #F8F8F8;
+  font: 14px PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial;
+  overflow: auto;
+}
+a {
+  color: #333333;
+  text-decoration: none;
+}
+a:hover {
+  color: #ED9127;
+  text-decoration: none;
+}
+ul,
+ol,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.clear:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.gt {
+  float: right;
+}
+.lf {
+  float: left;
+}
+img {
+  cursor: pointer;
+  vertical-align: middle;
+}
+h3 {
+  font-size: 16px;
+}
+.content {
+  margin: 0 auto;
+  width: 1200px;
+  min-height: 600px;
+  padding: 0 20px;
+  background: #fff;
+  padding-bottom: 50px;
+}
+input:focus {
+  outline: none;
+}
+form.sui-form input[type="text"] {
+  font-size: 14px;
+}
+input::-webkit-input-placeholder {
+  color: #BEBEBE!important;
+  font-size: 14px;
+}
+input:-moz-placeholder {
+  color: #BEBEBE!important;
+  font-size: 14px;
+}
+input::-moz-placeholder {
+  color: #BEBEBE!important;
+  font-size: 14px;
+}
+input:-ms-input-placeholder {
+  color: #BEBEBE!important;
+  font-size: 14px;
+}
+.sui-form input[type="text"] {
+  box-shadow: none;
+  color: #333333;
+  font-family: 14px PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial;
+}
+.datepicker {
+  width: 258px;
+  height: 258px;
+}
+.datepicker .table-condensed {
+  width: 258px;
+  height: 258px;
+}
+.dropdown-inner span {
+  color: #BEBEBE;
+  font-size: 14px;
+}
+#outerdiv {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1100;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+#outerdiv #innerdiv {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#head {
+  border-bottom: 1px solid #DDDDDD;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  padding: 10px 0;
+}
+#content .span1 {
+  width: 8.9%;
+}
+#content .span5 {
+  width: 40%;
+}
+#content .btns {
+  text-align: right;
+}
+#content .btns a {
+  display: inline-block;
+  width: 70px;
+  height: 26px;
+  line-height: 26px;
+  background: #ED9127;
+  border-radius: 4px;
+  text-align: center;
+  color: #fff;
+}
+#content .btns a:hover {
+  background: #DB7B0D;
+}
+#content .btns a.add {
+  margin-right: 10px;
+}
+#content #btn-file {
+  display: none;
+}
+#content .grid-demo {
+  margin-bottom: 20px;
+}
+#content .sui-row-fluid > div:nth-child(2n-1) {
+  color: #B2B2B2;
+}
+#content .sui-row-fluid > div:nth-child(2n-1) h3 {
+  color: #333333;
+}
+#content .sui-row-fluid > div.time {
+  color: #333333;
+}
+#content .sui-row-fluid > div.company {
+  color: #333333;
+  font-weight: bold;
+}
+#content ul.proof {
+  display: flex;
+  flex-wrap: wrap;
+}
+#content ul.proof li {
+  width: 175px;
+  height: 107px;
+  border-radius: 2.8px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+#content ul.proof li > img {
+  width: 100%;
+  height: 100%;
+}
+#content div.prove {
+  margin-top: 37px;
+}
+#content div.toolbar {
+  border-bottom: 1px solid #DDDDDD;
+  padding-bottom: 5px;
+}
+#content #record > div {
+  margin-bottom: 20px;
+}
+#content #record > div .span2 {
+  width: 145px;
+}
+#content #passBtn {
+  margin-top: 20px;
+}
+#content #passBtn .span12 {
+  text-align: right;
+}
+#content #passBtn .span12 a {
+  display: inline-block;
+  width: 70px;
+  height: 26px;
+  line-height: 26px;
+  background: #fff;
+  border-radius: 4px;
+  text-align: center;
+}
+#content #passBtn .span12 a.pass {
+  color: #fff;
+  background: #ED9127;
+}
+#content #passBtn .span12 a.pass:hover {
+  background: #DB7B0D;
+}
+#content #passBtn .span12 a:last-child {
+  border: 1px solid #DDDDDD;
+}
+#content #passBtn .span12 a.pass {
+  margin-right: 20px;
+}

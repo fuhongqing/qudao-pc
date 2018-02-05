@@ -1,0 +1,140 @@
+@import "init";
+//面包屑导航
+#head{
+  border-bottom: 1px solid @border-color;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  padding: 10px 0;
+  a{
+    font-size: 8px;
+  }
+}
+//头部
+header{
+  display: flex;
+  ul>li{
+    width: 140px;
+    height: 164px;
+    border: 1px solid @border-color;
+  }
+  //个人信息
+  #personInfo{
+    margin-left: 20px;
+    margin-bottom: 20px;
+    flex: 1;
+    .sui-row-fluid{
+      margin-bottom: 15px;
+      //键
+      .span1{
+        color: #B2B2B2;
+      }
+      h3{
+        color:@text-color;
+      }
+    }
+  }
+}
+//图表、列表
+section{
+  padding-bottom: 40px;
+  //日期筛选
+  #timeSelect{
+    margin-bottom: 25px;
+    margin-right: 90px;
+    input{
+      width: 126px;
+      height: 20px;
+      border: 1px solid @border-color;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    //向下箭头
+    img{
+      position: relative;
+      right: 20px;
+    }
+    span{
+      margin-right: 10px;
+    }
+    //筛选按钮
+    a{
+      display: inline-block;
+      width: 39px;
+      height: 20px;
+      line-height: 20px;
+      text-align: center;
+      margin-right: 10px;
+      .a-btn(@border-color,@text-color,14px);
+      border-radius: 4px;
+    }
+    a.active{
+      border: none;
+      background: @a-color;
+      color: @content-bg;
+    }
+    //行
+    .sui-row-fluid{
+      text-align: right;
+      display: flex;
+      justify-content: flex-end;
+      .span4{
+        margin-right: -80px;
+      }
+    }
+  }
+  //折线图
+  #weekChart,#monthChart{
+    display: none;
+  }
+  //#items项目列表
+  #items{
+    margin:0 auto;
+    background: @content-bg;
+    tr{
+      height:50px;
+    }
+    thead{
+      tr{
+        height:51px;
+      }
+      th{
+        line-height: 2.1;
+        font-size: 16px;
+        vertical-align: middle;
+        span{
+          cursor: pointer;
+          padding: 6px 0;
+        }
+      }
+      th.active>span{
+        border-bottom: 2px solid @a-color;
+        color:@a-color;
+      }
+    }
+    tbody{
+      td{
+        font-size: 12px;
+        padding: 5px 8px;
+      }
+      td:first-child{
+        width: 270px;
+      }
+      tr:first-child{
+        background: @body-bg;
+        border: 1px solid @border-color;
+      }
+      tr:last-child{
+        border-bottom: 1px solid @border-color;
+        td{
+          color:@a-color;
+        }
+      }
+      td#tdBold{
+        font-size: 16px;
+        font-weight: bold;
+        color: @text-color;
+        border-right: 1px solid @border-color;
+      }
+    }
+  }
+}

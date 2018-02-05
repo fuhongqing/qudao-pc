@@ -1,0 +1,107 @@
+<!--<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=7;IE=9" />
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta name="description" content="">
+    <title>渠道公司审核</title>
+    <link href="http://www.ehaofang.com/img/ef.ico" type="image/x-icon" rel="icon">
+    <link href="http://www.ehaofang.com/img/ef.ico" type="image/x-icon" rel="shortcut icon">
+    <link href="http://g.alicdn.com/sj/dpl/1.5.1/css/sui.min.css" rel="stylesheet">
+    <link href="http://g.alicdn.com/sj/dpl/1.5.1/css/sui-append.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/agentExam.css"/>
+</head>
+<body>
+<!--<%@ include file="head.jsp" %>-->
+<div class="content">
+    <!--面包屑导航-->
+    <p id="head">
+        <a href="http://www.xtco.cn/">轩天实业</a>&gt;<a>渠道</a>&gt;<a href="agentExam.html">渠道公司审核</a>
+    </p>
+    <!--筛选-->
+    <div id="nav">
+        <a>渠道公司</a><a class="active">待审核渠道公司</a>
+    </div>
+    <!--筛选-->
+    <header>
+        <ul id="area" class="clear">
+            <li>所在地区：</li>
+            <li class="all active">不限</li>
+            <li>上海</li>
+            <li>苏州</li>
+        </ul>
+    </header>
+    <!--列表内容-->
+    <section class="clear">
+        <!--搜索框-->
+        <div id="search" class="clear">
+            <form class="sui-form gt">
+                <div class="input-append">
+                    <input id="appendedInput" type="text" class="span2 input-fat" placeholder="请输入姓名／公司/电话号码进行搜索">
+                    <span class="add-on"><img src="./img/search.png" alt=""/></span>
+                </div>
+            </form>
+        </div>
+        <!--经纪人列表-->
+        <table id="items" class="sui-table">
+            <thead>
+            <tr>
+                <th>公司名</th>
+                <th>合作次数</th>
+                <th>公司负责人</th>
+                <th>合作项目</th>
+                <th>开始合作时间</th>
+                <th>合作期限</th>
+                <th>发起人</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!--动态生成-->
+            <tr>
+                <td>中原地产上海分公司</td>
+                <td>初次合作</td>
+                <td>张三</td>
+                <td>水月周庄</td>
+                <td>2017-08-09</td>
+                <td>6个月</td>
+                <td>陈奕迅</td>
+            </tr>
+            <tr>
+                <td>中原地产上海分公司</td>
+                <td>初次合作</td>
+                <td>张三</td>
+                <td>水月周庄</td>
+                <td>2017-08-09</td>
+                <td>6个月</td>
+                <td>陈奕迅</td>
+            </tr>
+            </tbody>
+        </table>
+        <!--分页器-->
+        <ul id="pages" class="gt clear">
+            <li class="prev disabled">&lt;</li>
+            <ul id="pageNum" class="lf">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>...</li>
+                <li>50</li>
+            </ul>
+            <li class="next">&gt;</li>
+        </ul>
+    </section>
+</div>
+<script type="text/javascript" src="http://g.alicdn.com/sj/lib/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="http://g.alicdn.com/sj/dpl/1.5.1/js/sui.min.js"></script>
+<!--<script type="text/javascript" src="http://loupan.ehaofangwang.com/ehaofang-pmweb/pages/js/jquery-1.10.2.min.js"></script>-->
+<!--<script type="text/javascript" src="http://loupan.ehaofangwang.com/ehaofang-pmweb/pages/js/agent.js"></script>-->
+<script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="./js/agentExam.js"></script>
+</body>
+</html>

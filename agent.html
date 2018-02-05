@@ -1,0 +1,129 @@
+<!--<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=7;IE=9" />
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta name="description" content="">
+    <title>渠道-经纪人</title>
+    <link href="http://www.ehaofang.com/img/ef.ico" type="image/x-icon" rel="icon">
+    <link href="http://www.ehaofang.com/img/ef.ico" type="image/x-icon" rel="shortcut icon">
+    <link href="http://g.alicdn.com/sj/dpl/1.5.1/css/sui.min.css" rel="stylesheet">
+    <link href="http://g.alicdn.com/sj/dpl/1.5.1/css/sui-append.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/agent.css"/>
+</head>
+<body>
+<!--<%@ include file="head.jsp" %>-->
+<div class="content">
+ <!--面包屑导航-->
+    <p id="head">
+        <a href="http://www.xtco.cn/">轩天实业</a>&gt;<a>渠道</a>&gt;<a>经纪人</a>
+    </p>
+    <!--筛选-->
+    <header>
+        <ul id="area" class="clear">
+            <li>所在地区：</li>
+            <li class="all active">不限</li>
+            <li>上海</li>
+            <li>苏州</li>
+        </ul>
+        <ul id="achiveTime" class="clear">
+            <li>业绩时间：</li>
+            <li>
+                <form class="sui-form form-horizontal">
+                    <div data-toggle="datepicker" class="control-group input-daterange">
+                        <div class="controls">
+                            <input type="text" id="achiveTime_start" class="input-medium" placeholder="请选择">
+                            <img src="img/down-disabled.png" alt=""/>
+                            <span>至</span>
+                            <input type="text" id="achiveTime_end" class="input-medium" placeholder="请选择">
+                            <img src="img/down-disabled.png" alt=""/>
+                            <button id="btn">确定</button>
+                        </div>
+                    </div>
+                </form>
+            </li>
+        </ul>
+    </header>
+    <!--列表内容-->
+    <section class="clear">
+        <!--搜索框-->
+        <div id="search" class="clear">
+            <form class="sui-form gt">
+                <div class="input-append">
+                    <input id="appendedInput" type="text" class="span2 input-fat" placeholder="请输入公司名/地区进行搜索">
+                    <span class="add-on"><img src="./img/search.png" alt=""/></span>
+                </div>
+            </form>
+        </div>
+        <!--经纪人列表-->
+        <table id="items" class="sui-table">
+            <thead>
+              <tr>
+                <th>姓名</th>
+                <th>所属公司</th>
+                <th>分行</th>
+                <th>联系电话</th>
+                <th>
+                    <div class="gt" id="job">
+                        <img class="up-img" src="./img/up-disabled-a.png" alt=""/>
+                        <img class="down-img" src="./img/down-disabled.png" alt=""/>
+                    </div>
+                    职位
+                </th>
+                <th>
+                    <div class="gt" id="regTime">
+                        <img class="up-img" src="./img/up-disabled-a.png" alt=""/>
+                        <img class="down-img" src="./img/down-disabled.png" alt=""/>
+                    </div>
+                    注册时间
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+            <!--动态生成-->
+                <tr>
+                    <td>张三</td>
+                    <td>链家地产上海分公司</td>
+                    <td>九亭A组</td>
+                    <td>15699939939</td>
+                    <td>职业顾问</td>
+                    <td>2017-09-31 13:01</td>
+                </tr>
+                <tr>
+                    <td>张三</td>
+                    <td>链家地产上海分公司</td>
+                    <td>九亭A组</td>
+                    <td>15699939939</td>
+                    <td>职业顾问</td>
+                    <td>2017-09-31 13:01</td>
+                </tr>
+            </tbody>
+        </table>
+        <!--分页器-->
+        <ul id="pages" class="gt clear">
+            <li class="prev disabled">&lt;</li>
+            <ul id="pageNum" class="lf">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>...</li>
+                <li>50</li>
+            </ul>
+            <li class="next">&gt;</li>
+        </ul>
+    </section>
+</div>
+<script type="text/javascript" src="http://g.alicdn.com/sj/lib/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="http://g.alicdn.com/sj/dpl/1.5.1/js/sui.min.js"></script>
+<!--<script type="text/javascript" src="http://loupan.ehaofangwang.com/ehaofang-pmweb/pages/js/jquery-1.10.2.min.js"></script>-->
+<!--<script type="text/javascript" src="http://loupan.ehaofangwang.com/ehaofang-pmweb/pages/js/agent.js"></script>-->
+<script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="./js/agent.js"></script>
+</body>
+</html>
